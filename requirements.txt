@@ -2,4 +2,4 @@ flask
 pygithub
 python-dotenv
 requests
-openai
+groq
