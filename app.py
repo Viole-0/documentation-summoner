@@ -3,7 +3,7 @@ from github import Github, GithubIntegration
 import os
 import requests
 from dotenv import load_dotenv
-from openai import OpenAI
+from groq import Groq
 
 # Load environment variables
 load_dotenv()
@@ -11,7 +11,7 @@ load_dotenv()
 app = Flask(__name__)
 
 # Initialize OpenAI client
-client = OpenAI(api_key=os.getenv("OPENAI_API_KEY"))
+groq_client = Groq(api_key=os.getenv("GROQ_API_KEY"))
 
 @app.route("/webhook", methods=["POST"])
 def webhook():
@@ -54,16 +54,16 @@ def webhook():
 
 def generate_summary(diff_text):
     prompt = f"""
-You are an expert software reviewer.
-Summarize the following Pull Request diff clearly and concisely.
-Explain what changed, why, and its potential impact.
+    You are an expert software reviewer.
+    Summarize the following Pull Request diff clearly and concisely.
+    Explain what changed, why it matters, and its potential impact.
 
-Diff:
-{diff_text}
-"""
+    Diff:
+    {diff_text}
+    """
 
-    response = client.chat.completions.create(
-        model="gpt-4.1-mini",
+    response = groq_client.chat.completions.create(
+        model="llama-3.1-70b-versatile",
         messages=[{"role": "user", "content": prompt}],
         max_tokens=200
     )
