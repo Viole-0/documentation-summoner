@@ -145,14 +145,14 @@ def webhook():
         if title:
             pr.edit(title=title)
 
-        # 🌟 Save PR to dashboard DB
+        '''# 🌟 Save PR to dashboard DB
         save_pr_to_db(
             pr_number=pr_number,
             title=title or pr.title,
             summary=summary,
             labels=labels or [],
             repo=f"{owner}/{repo_name}"
-        )
+        )'''
 
     return jsonify({"status": "ok"}), 200
 
