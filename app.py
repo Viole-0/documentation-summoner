@@ -23,8 +23,8 @@ MODEL_MAP = {
     "summary": "llama-3.3-70b-versatile",
     "explanation": "llama-3.3-8b-instant",
     "risk": "llama-3.3-70b-versatile",
-    "title": "llama-3.3-12b-versatile",
-    "labels": "llama-3.3-12b-versatile"
+    "title": "llama-3.3-8b-instant",
+    "labels": "llama-3.3-8b-instant"
 }
 
 def call_groq(prompt, mode="summary", max_tokens=350):
