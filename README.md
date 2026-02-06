@@ -1,3 +1,36 @@
+<p align="center">
+
+  <!-- Stars -->
+  <a href="https://github.com/Viole-0/documentation-summoner/stargazers">
+    <img src="https://img.shields.io/github/stars/Viole-0/documentation-summoner?style=for-the-badge" alt="Stars Badge"/>
+  </a>
+
+  <!-- Forks -->
+  <a href="https://github.com/Viole-0/documentation-summoner/network/members">
+    <img src="https://img.shields.io/github/forks/Viole-0/documentation-summoner?style=for-the-badge" alt="Forks Badge"/>
+  </a>
+
+  <!-- Issues -->
+  <a href="https://github.com/Viole-0/documentation-summoner/issues">
+    <img src="https://img.shields.io/github/issues/Viole-0/documentation-summoner?style=for-the-badge" alt="Issues Badge"/>
+  </a>
+
+  <!-- License -->
+  <a href="https://github.com/Viole-0/documentation-summoner/blob/main/LICENSE">
+    <img src="https://img.shields.io/github/license/Viole-0/documentation-summoner?style=for-the-badge" alt="License Badge"/>
+  </a>
+
+  <!-- Python -->
+  <img src="https://img.shields.io/badge/Python-3.13-blue?style=for-the-badge" alt="Python Badge"/>
+
+  <!-- Flask -->
+  <img src="https://img.shields.io/badge/Flask-Framework-black?style=for-the-badge&logo=flask" alt="Flask Badge"/>
+
+  <!-- Groq -->
+  <img src="https://img.shields.io/badge/AI%20Powered-Groq%20Llama%203.3-ff69b4?style=for-the-badge" alt="Groq Badge"/>
+
+</p>
+
 # 🧙 Documentation Summoner  
 ### AI-Powered Pull Request Reviewer, Labeler & Title Generator
 
