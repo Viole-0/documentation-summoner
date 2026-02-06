@@ -66,4 +66,4 @@ No external services receive your repository data.
 6. Contact
 
 For privacy questions or support, contact:
-📧 viole0.dev@gmail.com
+📧 mihirsingh0025@gmail.com
