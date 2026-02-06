@@ -1,27 +1,27 @@
 # 🧙 Documentation Summoner  
 ### AI-Powered Pull Request Reviewer, Labeler & Title Generator
 
-Documentation Summoner is a GitHub App that enhances Pull Request workflows using AI.  
-It reads your PR diffs, understands the changes, and responds with structured, human-quality insights.
+Documentation Summoner is a GitHub App that automates and enhances Pull Request reviews with AI.  
+It reads PR diffs, understands the changes, and responds with structured, human-readable insights.
 
 ---
 
-## 🌟 What Documentation Summoner Does
+## 🌟 Features
 
 ### ✔ Automatic PR Summaries  
-Whenever a PR is opened or updated, the Summoner posts:
+Each time a PR is opened or updated, Summoner posts:
 
-- A clean, multi-section summary  
-- Key change breakdown  
-- Why the change matters  
-- Impact rating (Low / Medium / High)  
-- Recommended labels  
-- AI-generated PR title  
+- 🧾 Overview  
+- 🔍 Key changes  
+- 🎯 Impact level (Low/Medium/High)  
+- 🏷 Suggested labels  
+- ✨ AI-generated PR title  
+- 📄 Beautiful formatting  
 
 ---
 
-### ✔ Slash Commands (Interactive)  
-Inside any PR comment, you can summon the bot directly:
+### ✔ Slash Commands  
+Interact with the Summoner directly inside PR comments:
 
 ```
 /summon summary
@@ -31,12 +31,10 @@ Inside any PR comment, you can summon the bot directly:
 /summon title
 ```
 
-It will instantly respond with the requested analysis.
-
 ---
 
-### ✔ Auto-Labeling  
-Summoner extracts the nature of the change and applies labels such as:
+### ✔ Auto Labeling  
+Summoner intelligently categorizes PRs with labels such as:
 
 - documentation  
 - enhancement  
@@ -46,92 +44,111 @@ Summoner extracts the nature of the change and applies labels such as:
 
 ---
 
-### ✔ AI-Generated PR Titles  
-The bot suggests clean, professional titles based on the diff.  
-It can even **edit the PR title automatically** using the machine-readable output.
+### ✔ Auto PR Title Generation  
+Suggests clean, professional PR titles —  
+and can update the PR title automatically.
 
 ---
 
-### ✔ Multi-Model AI Pipeline  
-Different features use optimal Groq models:
+### ✔ Groq LLM Powered  
+Uses a single stable model for reliability:
 
-- Summaries → 70B  
-- Risks → 70B  
-- Titles → 12B  
-- Explanations → 8B  
-- Labels → 12B  
+- `llama-3.3-70b-versatile`  
 
-This keeps the app fast, cost-efficient, and sharp.
+Provides fast, accurate, and consistent code analysis.
 
 ---
 
 ## ⚡ Architecture
 
 ```
-GitHub App → PR Event → Flask Webhook (Render)
-          → Groq LLM → Summarization / Labels / Titles
-          → GitHub API → Comment + Update PR Metadata
+GitHub App → Pull Request Event  
+           → Flask Server (Render)  
+           → Groq AI Model  
+           → GitHub API (comments, labels, titles)
 ```
 
 ---
 
-## 🚀 Getting Started (Setup Guide)
+## 🚀 Getting Started
 
-1. Create a GitHub App  
-2. Enable permissions:  
-   - Pull Requests: Read & Write  
-   - Issues: Read & Write  
-3. Subscribe to events:  
-   - pull_request  
-   - issue_comment  
-4. Add webhook:  
-   ```
-   https://your-render-url/webhook
-   ```  
-5. Add environment variables:  
-   ```
-   GITHUB_APP_ID=xxx
-   GROQ_API_KEY=xxx
-   ```
-6. Add your GitHub App private key as `private-key.pem`  
+### 1. Create a GitHub App  
+- Permissions:
+  - Pull Requests → Read & Write  
+  - Issues → Read & Write  
+- Events:
+  - pull_request  
+  - issue_comment  
+- Webhook:
+  ```
+  https://your-render-url/webhook
+  ```
 
 ---
 
-## 💻 Deploy on Render
+### 2. Environment Variables
+```
+GITHUB_APP_ID=your_app_id
+GROQ_API_KEY=your_groq_api_key
+```
 
+### 3. Place your private key  
+File must be named:
+```
+private-key.pem
+```
+
+---
+
+## 💻 Running Locally
+
+```
+pip install -r requirements.txt
+python app.py
+```
+
+Server runs at:
+```
+http://localhost:3000/webhook
+```
+
+---
+
+## 📦 Deploying on Render  
 1. Create a Web Service  
-2. Connect repo: `documentation-summoner`  
-3. Add env vars  
+2. Add environment variables  
+3. Connect your GitHub repo  
 4. Deploy  
-5. Update Webhook URL in GitHub App  
+5. Paste Render webhook URL into GitHub App  
 
 ---
 
-## 🧪 Testing
+## 🧪 Testing the App
 
 1. Create a branch  
 2. Make a small change  
-3. Open pull request  
-4. Summoner comments automatically  
-5. Run slash commands to interact  
+3. Open a Pull Request  
+4. Summoner posts automatic summary  
+5. Try slash commands in PR  
 
 ---
 
-## 🛣️ Roadmap
+## 🛣️ Roadmap  
 
-- Inline code review comments  
+- Inline code comments  
 - File-by-file summaries  
-- Dashboard + analytics  
-- Multi-repo auto-installation  
-- GitHub Marketplace listing  
+- Advanced risk scoring  
+- Dashboard analytics  
+- GitHub Marketplace launch ✔ (in progress)
 
 ---
 
 ## 🪄 Author  
-Crafted with patience, curiosity, and a little magic by **Viole-0**.
+Built with curiosity, patience, and late-night energy by **Viole-0**.
 
 ---
 
 ## 📜 License  
 MIT License — free to use, modify, and enhance.
 
+---
