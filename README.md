@@ -81,7 +81,7 @@ GitHub App → Pull Request Event
   - issue_comment  
 - Webhook:
   ```
-  https://your-render-url/webhook
+  https://documentation-summoner.onrender.com/webhook
   ```
 
 ---
