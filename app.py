@@ -21,10 +21,10 @@ groq_client = Groq(api_key=os.getenv("GROQ_API_KEY"))
 # ------------------------------------------------------------
 MODEL_MAP = {
     "summary": "llama-3.3-70b-versatile",
-    "explanation": "llama-3.1-8b-instant",
+    "explanation": "llama-3.3-8b-instant",
     "risk": "llama-3.3-70b-versatile",
-    "title": "llama-3.1-12b-instant",
-    "labels": "llama-3.1-12b-instant"
+    "title": "llama-3.3-12b-versatile",
+    "labels": "llama-3.3-12b-versatile"
 }
 
 def call_groq(prompt, mode="summary", max_tokens=350):
